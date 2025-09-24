@@ -108,7 +108,7 @@ def train_model(df):
     # Configure training
     training_args = TrainingArguments(
         output_dir='./results',
-        num_train_epochs=5,
+        num_train_epochs=20,
         per_device_train_batch_size=16,
         warmup_steps=500,
         weight_decay=0.01,
@@ -207,6 +207,7 @@ if st.button("Train Model"):
             st.error(f"Error during training: {e}")
     else:
         st.warning("Please upload a CSV file to begin training.")
+
 
 
 
