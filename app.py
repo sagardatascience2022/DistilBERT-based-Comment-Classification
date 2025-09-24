@@ -1,3 +1,4 @@
+pip install -r requirements.txt
 import torch
 from transformers import DistilBertForSequenceClassification, DistilBertTokenizer, Trainer, TrainingArguments
 from torch.utils.data import Dataset, DataLoader
@@ -207,3 +208,4 @@ if st.button("Train Model"):
             st.error(f"Error during training: {e}")
     else:
         st.warning("Please upload a CSV file to begin training.")
+
